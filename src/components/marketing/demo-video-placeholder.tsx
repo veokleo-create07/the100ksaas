@@ -1,8 +1,8 @@
-import { Play } from "lucide-react";
+import { Play, Sparkles } from "lucide-react";
 
 export function DemoVideoPlaceholder() {
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-[var(--marketing-radius-lg)] border border-slate-900/10 bg-white shadow-[0_18px_45px_rgb(34_73_109_/_0.13)]">
+    <div aria-label="Clonao product demo preview" className="relative aspect-video w-full overflow-hidden rounded-[var(--marketing-radius-lg)] border border-slate-900/10 bg-white shadow-[0_18px_45px_rgb(34_73_109_/_0.13)]">
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#f8fbfd_0%,#ffffff_100%)] p-3 sm:p-5">
         <div className="flex h-full overflow-hidden rounded-[var(--marketing-radius-md)] border border-[var(--marketing-border)] bg-[#f5f8fb]">
           <aside className="hidden w-[22%] border-r border-[var(--marketing-border)] bg-white p-3 sm:block">
@@ -35,6 +35,17 @@ export function DemoVideoPlaceholder() {
           </div>
         </div>
       </div>
+      <div className="pointer-events-none absolute left-1/2 top-5 -translate-x-1/2 sm:top-7">
+        <div className="demo-caption demo-caption-create flex items-center gap-1.5 whitespace-nowrap rounded-full border border-[var(--marketing-border)] bg-white/90 px-2.5 py-1.5 text-[0.6rem] font-medium text-[var(--marketing-text-secondary)] shadow-sm sm:px-3 sm:text-xs">
+          <Sparkles className="size-3 text-[var(--clonao-blue)]" /> Drafting from your knowledge
+        </div>
+        <div className="demo-caption demo-caption-plan flex items-center gap-1.5 whitespace-nowrap rounded-full border border-[var(--marketing-border)] bg-white/90 px-2.5 py-1.5 text-[0.6rem] font-medium text-[var(--marketing-text-secondary)] shadow-sm sm:px-3 sm:text-xs">
+          <Sparkles className="size-3 text-[var(--clonao-blue)]" /> Shaping your weekly plan
+        </div>
+        <div className="demo-caption demo-caption-analyze flex items-center gap-1.5 whitespace-nowrap rounded-full border border-[var(--marketing-border)] bg-white/90 px-2.5 py-1.5 text-[0.6rem] font-medium text-[var(--marketing-text-secondary)] shadow-sm sm:px-3 sm:text-xs">
+          <Sparkles className="size-3 text-[var(--clonao-blue)]" /> Finding your next decision
+        </div>
+      </div>
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="flex size-12 items-center justify-center rounded-full bg-[var(--clonao-blue)] text-white shadow-[var(--marketing-shadow-button)] transition-transform hover:scale-105 sm:size-14">
           <Play className="ml-0.5 size-5 fill-current sm:size-6" strokeWidth={1.5} />
@@ -47,7 +58,7 @@ export function DemoVideoPlaceholder() {
         </div>
       </div>
       <div className="absolute bottom-3 right-3 h-1 w-20 overflow-hidden rounded-full bg-slate-300/70 sm:bottom-5 sm:right-5 sm:w-28">
-        <div className="h-full w-1/4 rounded-full bg-[var(--clonao-blue)]" />
+        <div className="demo-progress h-full w-1/4 rounded-full bg-[var(--clonao-blue)]" />
       </div>
     </div>
   );

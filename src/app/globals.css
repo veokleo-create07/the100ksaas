@@ -224,6 +224,51 @@
     letter-spacing: -0.01em;
     line-height: 1.25;
   }
+
+  .demo-caption {
+    animation: demo-caption-fade 9s ease-in-out infinite;
+  }
+
+  .demo-caption-plan {
+    animation-delay: 3s;
+    margin-top: -1.75rem;
+  }
+
+  .demo-caption-analyze {
+    animation-delay: 6s;
+    margin-top: -1.75rem;
+  }
+
+  .demo-progress {
+    animation: demo-progress 9s linear infinite;
+  }
+}
+
+@keyframes demo-caption-fade {
+  0%,
+  2% {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+  8%,
+  26% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  32%,
+  100% {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+}
+
+@keyframes demo-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @media (min-width: 640px) {
