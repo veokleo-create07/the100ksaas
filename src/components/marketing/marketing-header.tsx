@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const navigation = [
@@ -12,7 +13,8 @@ export function MarketingHeader() {
   return (
     <header className="relative z-20 border-b border-slate-900/5 bg-white/25">
       <div className="marketing-container flex h-[4.5rem] items-center justify-between">
-        <Link href="/" className="text-lg font-semibold tracking-[-0.04em] text-[var(--marketing-text)]">
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-[-0.04em] text-[var(--marketing-text)]">
+          <Image src="/clonao-logo-clean.png" alt="" width={28} height={28} priority className="size-7 object-contain" />
           Clonao
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-7 sm:flex">
