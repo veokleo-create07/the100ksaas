@@ -11,35 +11,35 @@ const navigation = [
 
 export function MarketingHeader() {
   return (
-    <header className="relative z-20 border-b border-slate-900/5 bg-white/25">
+    <header className="relative z-20 bg-transparent">
       <div className="marketing-container flex h-[4.5rem] items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-[-0.04em] text-[var(--marketing-text)]">
-          <Image src="/clonao-logo-clean.png" alt="" width={28} height={28} priority className="size-7 object-contain" />
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-[-0.04em] text-white drop-shadow-[0_1px_2px_rgb(23_38_56_/_0.2)]">
+          <Image src="/clonao-logo-clean.png" alt="" width={28} height={28} priority className="size-7 object-contain brightness-0 invert" />
           Clonao
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-7 sm:flex">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="text-nav transition-colors hover:text-[var(--marketing-text)]">
+            <Link key={item.href} href={item.href} className="text-nav text-white drop-shadow-[0_1px_2px_rgb(23_38_56_/_0.2)] transition-colors hover:text-white/75">
               {item.label}
             </Link>
-            ))}
+          ))}
         </nav>
         <div className="hidden items-center gap-2 sm:flex">
           <Link
             href="/sign-in"
-            className="text-nav rounded-[var(--marketing-radius-sm)] px-3 py-2 transition-colors hover:bg-white/60 hover:text-[var(--marketing-text)]"
+            className="text-nav rounded-[var(--marketing-radius-sm)] px-3 py-2 text-white drop-shadow-[0_1px_2px_rgb(23_38_56_/_0.2)] transition-colors hover:bg-white/15 hover:text-white"
           >
             Log in
           </Link>
           <Link
             href="/sign-up"
-            className="rounded-[var(--marketing-radius-sm)] bg-[var(--clonao-blue)] px-3.5 py-2 text-sm font-semibold text-white shadow-[var(--marketing-shadow-button)] transition-colors hover:bg-[var(--clonao-blue-hover)]"
+            className="rounded-[var(--marketing-radius-sm)] bg-white px-3.5 py-2 text-sm font-semibold text-[var(--marketing-text)] shadow-[0_5px_14px_rgb(23_38_56_/_0.12)] transition-colors hover:bg-white/80"
           >
             Start free trial
           </Link>
         </div>
         <details className="group relative sm:hidden">
-          <summary className="flex size-10 list-none cursor-pointer items-center justify-center rounded-[var(--marketing-radius-sm)] text-[var(--marketing-text)] transition-colors hover:bg-white/60 [&::-webkit-details-marker]:hidden">
+          <summary className="flex size-10 list-none cursor-pointer items-center justify-center rounded-[var(--marketing-radius-sm)] text-white drop-shadow-[0_1px_2px_rgb(23_38_56_/_0.2)] transition-colors hover:bg-white/15 [&::-webkit-details-marker]:hidden">
             <Menu className="size-5 group-open:hidden" strokeWidth={1.8} />
             <X className="hidden size-5 group-open:block" strokeWidth={1.8} />
             <span className="sr-only">Open navigation menu</span>
