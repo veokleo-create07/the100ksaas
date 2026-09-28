@@ -14,7 +14,7 @@ export function MarketingHeader() {
     <header className="relative z-20 bg-transparent">
       <div className="marketing-container flex h-[4.5rem] items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-[-0.04em] text-white drop-shadow-[0_1px_2px_rgb(23_38_56_/_0.2)]">
-          <Image src="/clonao-logo-clean.png" alt="" width={28} height={28} priority className="size-7 object-contain brightness-0 invert" />
+          <Image src="/clonao-logo-new.png" alt="" width={28} height={28} priority className="size-7 object-contain" />
           Clonao
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-7 sm:flex">
